@@ -1,0 +1,206 @@
+<POST>
+
+
+Buonasera ragazzi, 
+non riesco ad utilizzare i grade0x.py una volta scritto il programma
+Infatti mi da l'errore
+ImportError: No module named testlib 
+Se qualcuno ha avuto il mio stesso problema o può aiutarmi. Vi ringrazio
+
+
+
+<POST>
+
+
+Lo devi aprire da terminale, arrivi fino alla cartella Homework01 e lo lanci da li!
+
+
+
+<POST>
+
+
+Ciao sei sicura di aver usato i seguenti comandi
+python grade01.py
+python grade02.py
+python grade03.py
+dopo esserti posizionata nella giusta cartella? :D io sono riuscito a farlo subito per questo ti faccio questa domanda banale...
+
+
+
+<POST>
+
+
+Copia il percorso di installazione di Python. 
+Una volta copiato vai su Computer/Proprietà del Sistema/Impostazioni di sistema avanzate/Variabili d'ambiente.
+Nella finestrella di "Variabili di sistema" scorri fino a "Path" e clicchi su "Mofifica". In Valore variabile (attenta a non cancellare nulla), inserisci un punto e virgola ed incolli il percorso del file. 
+Così dovrebbe andare.
+
+
+
+<POST>
+
+
+Grazie mille a tutti e tre :) 
+
+
+
+<POST>
+
+
+Ho avuto problemi con l'ultimo homework. Avevo completato l'algoritmo e ho fatto il test di verifica. Il risultato era corretto ma mancavano gli spazi. Dopo aver corretto e salvato il programma ho avviato ancora una volta il test, ma dava lo stesso errore. Per ore ho cercato di modificare il programma pensando di aver sbagliato qualcosa, ma in reatà era il test che non riusciva ad aggiornarsi. Ho risolto chiudendo canopy e riaprendolo caricando programma e test(a quanto pare devo riavviare canopy a ogni test). (utilizzo canopy 1.4.1 per windows 8 x64 bit la versione di python è 2.7.3) Spero che vi possa essere utile se avete lo stesso problema.
+
+
+
+<POST>
+
+
+Anche io come ??? con Canopy devo riavviare ogni volta che voglio testare......però non ho capito perchè....un motivo ci sarà pure..... :-(
+
+Della serie che ogni modifica va ritestata con una chiusura e riapertuta di Canopy....!! Che stress.....!!!!
+
+
+
+<POST>
+
+
+Quando eseguo il grade01.py mi dà questo errore: error -> AssertionError. A cosa potrebbe essere dovuto? Grazie.
+
+
+
+<POST>
+
+
+L'errore viene fuori durante la valutazione e non eseguendo il tuo codice.
+E' successo anche a me ed ho risolto usando gli esempi contenuti nel grade0x.py realtivo.
+
+
+
+<POST>
+
+
+Si, ho preso i test relativi e li ho copiati nel mio codice, verificando i risultati. Eseguendo i tests da Canopy mi dà questo errore, ora provo ad eseguirlo da terminale.
+
+
+
+<POST>
+
+
+Da terminale non dà errore. Potrebbe essere Canopy, come si diceva nei post precedenti,
+
+
+
+<POST>
+
+
+Stesso problema anche io :-(
+
+
+
+<POST>
+
+
+Se i tuoi risultati sono identici a quelli attesi dal grade0x, credo che il problema sia da ricercare nelle espressioni che usi per arrivare al risultato. Verifica bene i tipi di dato che usi.
+
+
+
+<POST>
+
+
+Confermo la correttezza dei dati. Il problema dovrebbe riguardare appunto i tipi di dato utilizzati......vediamo se ne vengo a capo.....!!!
+Più che altro mi chiedo, in questo caso con risultato corretto....ma valutazione errota da parte del grade0x.py l'esercizio viene considerato giusto o errato?
+
+
+
+<POST>
+
+
+Sto utilizzando Canopy 1.4 e la funzione va, quando uso il grade0x.py mi da un IndentationError unexpected indent a qualcuno è uscito questo errore?
+
+
+
+<POST>
+
+
+Risolto thanks a tutti in ogni caso
+
+
+
+<POST>
+
+
+Io invece continuo a non risolvere error - AssertionError.
+
+Eppure i risultati sono corretti......grrrrrrr.......!!!!!
+
+E non capisco se è tra virgolette sbagliata la soluzione.....o è Canopy che fa i capricci.....visto che mi tocca anche riavviare ogni volta per testare :-(
+
+
+
+<POST>
+
+
+Io ho testato da riga di comando, con Canopy solamente lo sviluppo, hai provato a fare così?
+
+
+
+<POST>
+
+
+Da riga di comando stesso problema (se come riga di comando intendi tramite Canopy Command Prompt)......evidentemente la modalità con cui arrivo alla soluzione pur essendo "corretta" presenta delle anomalie...non ho altre spiegazioni al momento.....
+Preciso comunque che il problema ce l'ho solo con il program03 e grade03....gli altri danno ok....
+
+
+
+<POST>
+
+
+io intendo proprio la riga di comando di windows, il buon vecchio cmd usando come comando python grade0x.py
+
+
+
+<POST>
+
+
+Provato anche da li...ma stesso risultato...risultati corretti....ma evidentemente è errato qualcosa nel codice..... :-(
+
+Non resta che approfondire...... uff......!!!!
+
+
+
+<POST>
+
+
+Problema Risolto.
+
+I risultati erano corretti tranne uno spazio dopo il carattere B....che mi restituiva quell'errore.....!!!
+
+Un'intera giornata dietro ad una stupidaggine del genere....non si può neanche raccontare :-( :-(
+
+
+
+<POST>
+
+
+Non so se lavori, ma nel campo informatico di questi errori ne ho incontrati molti....mi dispiace dirlo, ma è questione di abitudine e di.....occhio :-)
+
+
+
+<POST>
+
+
+Io eseguo il tutto da terminale e non uso l'editor grafico di Canopy, e naturalmente dopo ogni modifica del sorgente bisogna riavviare python in quanto, tramite l'import, tiene in memoria l'ultima versione, non contando le modifiche.
+Riguardo l'assertion error: fai attenzione che per testare se i risultati sono corretti o meno, viene preso in considerazione il valore di ritorno, quindi se mandi il risultato tramite print invece che tramite return, i programmi grade0x.py non possono eseguire il confronto, o almeno è quello che era successo a me. Spero di essere stato d'aiuto.
+
+
+
+<POST>
+
+
+Ringrazio tutti per i "sempre" preziosi consigli, ma fortunatamente tutti e tre gli homeworks adesso danno esito positivo :-)
+Ieri mi ha proprio fregato quel maledetto spazio dopo la B di byte :-(
+
+@ ??? : l'AssertionError nel mio caso usciva poichè la soluzione non coincideva "perfettamente" con quella attesa dal grade0x.py, infatti ho fatto dei test di controllo inversi, ovvero forzando l'errore volutamente e subito è comparso l'AssertionError.....buono a sapersi per il futuro....se compare la soluzione per quanto possa sembrare corretta non lo è perfettamente (magari per un solo spazio di differenza :-( ) .....!!
+
+Decisamente più scocciante dover riavviare Canopy ogni volta che viene effettuata una modifica per testarla!!!!
+
+Grazie e Buon Lavoro a Tutti :-)

@@ -1,0 +1,301 @@
+<POST>
+
+
+Completato il programma02 del secondo homework se faccio il "print" della lst modificata risulta essere uguale alla soluzione. Però nel grade mi da comunque errore.
+Ho messo in grassetto il print della lst modificata per far capire il problema.
+Se è possibile vorrei avere conferma sulla correttezza del grade.
+
+
+
+['Cara20130716', 'Tara', 1, 6, 2008, 'PALA', 31, 12, 1996, 'Melo19601023']
+test_program02_0               error -> AssertionError
+    ['Cara20130716', 'Tara20080601', 'PALA19961231', 'Melo19601023'] != ['Cara20130716', 'Tara', 1, 6, 2008, 'PALA', 31, 12, 1996, 'Melo19601023']
+
+
+['AAAA', 17, 1, 1981, 'BBBB', 2, 3, 1973, 'cCcC', 28, 11, 2006, 'Nano', 18, 5, 2001, 'Cane', 23, 7, 2000]
+test_program02_1               error -> AssertionError
+    ['AAAA19810117', 'BBBB19730302', 'cCcC20061128', 'Nano20010518', 'Cane20000723'] != ['AAAA', 17, 1, 1981, 'BBBB', 2, 3, 1973, 'cCcC', 28, 11, 2006, 'Nano', 18, 5, 2001, 'Cane', 23, 7, 2000]
+
+
+['AAAA19810117', 'BBBB19730302', 'cCcC20061128', 'Nano20010518', 'Cane20000723']
+test_program02_2               ok -> 3.0 points
+
+
+['TTTT', 25, 11, 2002, 'XXXX20030505', 'YZYZ', 27, 9, 1955, 'UUUU19001031', 'ZZZZ', 28, 2, 1901]
+test_program02_3               error -> AssertionError
+    ['TTTT20021125', 'XXXX20030505', 'YZYZ19550927', 'UUUU19001031', 'ZZZZ19010228'] != ['TTTT', 25, 11, 2002, 'XXXX20030505', 'YZYZ', 27, 9, 1955, 'UUUU19001031', 'ZZZZ', 28, 2, 1901]
+
+
+['TTTT20021125', 'XXXX', 5, 5, 2003, 'YZYZ19550927', 'UUUU', 31, 10, 1900, 'ZZZZ19010228']
+test_program02_4               error -> AssertionError
+    ['TTTT20021125', 'XXXX20030505', 'YZYZ19550927', 'UUUU19001031', 'ZZZZ19010228'] != ['TTTT20021125', 'XXXX', 5, 5, 2003, 'YZYZ19550927', 'UUUU', 31, 10, 1900, 'ZZZZ19010228']
+
+
+
+<POST>
+
+
+Hai modificato direttamente la lista di partenza (lst) o scritto il risultato in un'altra lista?
+
+
+
+<POST>
+
+
+Sicuro di ritornare la stessa lista di cui fai il print?
+
+Attento all'indentazione del return.
+
+
+
+<POST>
+
+
+si ho modificato la lista "lst" e ritorno proprio quella.
+
+
+
+<POST>
+
+
+Accade anche a me lo stesso identico problema, ho provato a richiamare la mia funzione dall'interno di program02.py ed effettuando dei test ho appurato che la lista viene effettivamente modificata dalla mia funzione, agendo per riferimento, ovvero le modifiche che apporto a lst si riscontrano anche all'esterno della funzione, cosa che invece non accade quando eseguo il test con grade02.py. Purtroppo non posso sennò avrei postato qui tutti i codici.
+
+
+
+<POST>
+
+
+Il punto è che non devi ritornarla, devi proprio sostituire gli elementi nella lista sorgente... vedi l'altro thread :) 
+
+
+
+
+<POST>
+
+
+Confermo il problema. Si può verificare banalmente con la seguente funzione:
+
+def codes(lst, cods):
+    del lst[:]
+
+Ed esce comunque:
+
+test_program02_0               error -> AssertionError
+    ['Cara20130716', 'Tara20080601', 'PALA19961231', 'Melo19601023'] != ['Cara20130716', 'Tara', 1, 6, 2008, 'PALA', 31, 12, 1996, 'Melo19601023']
+test_program02_1               error -> AssertionError
+    ['AAAA19810117', 'BBBB19730302', 'cCcC20061128', 'Nano20010518', 'Cane20000723'] != ['AAAA', 17, 1, 1981, 'BBBB', 2, 3, 1973, 'cCcC', 28, 11, 2006, 'Nano', 18, 5, 2001, 'Cane', 23, 7, 2000]
+test_program02_2               ok -> 3.0 points
+test_program02_3               error -> AssertionError
+    ['TTTT20021125', 'XXXX20030505', 'YZYZ19550927', 'UUUU19001031', 'ZZZZ19010228'] != ['TTTT', 25, 11, 2002, 'XXXX20030505', 'YZYZ', 27, 9, 1955, 'UUUU19001031', 'ZZZZ', 28, 2, 1901]
+test_program02_4               error -> AssertionError
+    ['TTTT20021125', 'XXXX20030505', 'YZYZ19550927', 'UUUU19001031', 'ZZZZ19010228'] != ['TTTT20021125', 'XXXX', 5, 5, 2003, 'YZYZ19550927', 'UUUU', 31, 10, 1900, 'ZZZZ19010228']
+Total score: 3.0
+
+
+
+
+
+<POST>
+
+
+Grazie ???, confermo che funzioni solo fuori Canopy per me.
+
+
+
+<POST>
+
+
+In realtà è accaduta una cosa... strana, cioè dopo aver eseguito grade02.py una volta con python ufficiale, adesso funziona anche con canopy (ecco perchè ho cancellato il post) e il codice è lo stesso di prima che dava problemi, solo che ora da ok a tutti e cinque i test. I misteri di python O.O
+
+
+
+<POST>
+
+
+Probabilmente se definite LST come variabile globale nel file program allora il grade userà quella al momento dell'importazione dandovi problemi a causa della doppia importazione (quella che fa Canopy di default) e quella del grade non garantendo un comportamento consistente. 
+
+Canopy non lo sto usando, vado di gedit e terminale; se non funziona così allora non funziona.
+
+
+
+<POST>
+
+
+io uso eclipse con pydev e tutto funziona. Quando eseguo grade02.py su cmd, mi dà lo stesso problema. 
+Ho dichiarato una lista vuota nella funzione, che ritorno alla fine di tutta la composizione della stessa.
+
+Da cosa può dipendere? Grazie
+
+
+
+<POST>
+
+
+Non importa cosa ritorni, grade02.py esamina la stessa lst che viene dato per controllare che è stata modificata. Al termine della tua funzione, lst deve contenere il risultato.
+
+
+
+<POST>
+
+
+Anche io ho lo stesso problema....
+
+In Canopy con il Print mi ritorna la lista correttamente....nel grade02.py la lista risulta errata...... esattamente come riportato nel primo post.
+
+Stesso risultato se verifico da terminale.
+
+Misteri...... :-(
+
+
+
+<POST>
+
+
+Scusate ma qualcuno l'ha fatto già presente al professore questa cosa del grade02?
+
+
+
+<POST>
+
+
+Confermo dopo altre 3 ore di tentativi che da Print il risultato è corretto anche sulla seconda lista del grade........ma se eseguo il grade stesso, il test se ne frega del mio return e prende la lst presa in partenza come input.
+
+Il problema almeno per me è quello.....e mi pare di capire lo sia anche per gli altri purtroppo :-((
+
+La soluzione modifica "in-place"...cosa indica?
+
+
+
+<POST>
+
+
+Ragazzi posso darvi un cosiglio? RIportate insieme al problema uno screenshot del grade in esequzione. Altimenti fate python grade02.py > log.txt e uploadate il log.txt.
+
+Detto questo il grade02 è particolare. Non controlla il return ma la lista di argomenti di partenza. Non è un bug ma è voluto.(Guardate il codice del grade02 è confrontatelo con quelli precedenti. è lamapante).  Comunque modificando la lista di partenza a me funziona.
+
+
+
+<POST>
+
+
+Anche io ho lo stesso problema, come potete vedere, i risultati, sono identici a quelli del grade ma solamente uno viene convalidato. Qualche spiegazione???
+
+
+
+<POST>
+
+
+Emanuele, il grade02 non valuta quello che returni, guarda solo la variabile "lst" a termine funzione. Non si capisce dal tuo screenshot se quello che ritorni dalla funzione sia veramente la stessa variabile lst data come parametro alla funzione o meno.
+
+
+
+<POST>
+
+
+Probabilmente non stai modificando la lista iniziale ma ne hai creata una niova che hai ritornato. Devi necessariamente modificare la lista iniziale lst.
+
+
+
+<POST>
+
+
+Purtroppo non posso caricare il codice (come richiesto dal professore) però posso dirti che all'inizio utilizzo una variabile lista vuota e poi la sostituisco:
+
+>>> lst = nuova_lista 
+
+Detto questo, dopo aver letto la tua risposta, ho provato il grader con una funzione fittizia con la prima soluzione (prende due parametri ma cambia la lista con una "soluzione" del grader) ma dà comunque errorAssertion e 3 punti al 3° test anziché al primo. 
+In allegato vi è lo screen
+Allegati (1)
+Schermata 2014-10-09 alle 18.19.56.png
+30 KB   Visualizza   Scarica
+
+
+
+<POST>
+
+
+L'assegnazione a lst come hai fatto nel screenshot, se ricordo bene, in pratica cancella (non proprio, ma i dettagli non c'interessano adesso) la variabile lst e ne fa un altro con lo stesso nome. Di solito non è un problema, ma il grade02 ha un collegamento diretto alla variabile lst originale. Facendo cosi la cancelli, e risulta al grade02 che lst non è stata modificata. Tutto sommato, "lst = []" o "lst = nuova_lista" non la puoi fare. Dovrai modificare gli elementi di lst, non puoi sostituire la variabile stessa. Spero che mi sono fatto capire abbastanza per essere d'aiuto, questi non sono argomenti semplici.
+
+
+
+<POST>
+
+
+Sisi ora ho capito 
+Grazie 
+
+
+
+<POST>
+
+
+
+Dopo una lunga battaglia.....anche a me ora il grade02 restituisce esito positivo... :-)
+
+Almeno per me è stata piuttosto dura....tra tutto c'ho perso 9 ore circa.......
+
+Speriamo che con il grade03 vada un pò meglio!!!!!!
+
+
+
+<POST>
+
+
+Lasciate ogni speranza oh voi che vi accingete al program03.
+
+
+
+
+
+<POST>
+
+
+scusate ragazzi, io penso di aver scritto una funzione in linea di massima corretta, visto che i risultati che ricevo sono molto simili a quello che richiede il grade. Credo che il problema sia la presenza degli apici su tutto il risultato, come fosse tutta una stringa, mentre se non ho interpretato male il grade vuole la prima porzione di codice in stringa e le restanti tre parti come interi.... Ma se così fosse, come concateno una stringa a degli interi??
+...Sono sicuro che dopo una giornata che ci sbatto la testa ci sia qualcosa che mi sfugge....qualcuno che mi possa illuminare?
+
+
+
+<POST>
+
+
+Sono elementi distinti della lista: dove prima c'era un elemento di stringa, il grade vuole che ci sia 4
+
+
+
+<POST>
+
+
+Un'ipotetica soluzione potrebbe essere suddividere la stringa in 4 parti:
+
+- lasciando le prime 4 lettere come stringa "str"
+
+- le restanti tre porzioni come "int"
+
+Poi fai gli opportuni aggiustamenti all'interno della lista....
+
+
+
+<POST>
+
+
+Devono essere elementi distinti nella lista non più stringhe concatenate da una virgola.
+
+
+
+<POST>
+
+
+Riuscito! Grazie dell'aiuto, la soluzione era forse un po' ovvia, ma non riuscivo a metterla in pratica...bastava dormirci su
+
+
+
+<POST>
+
+
+Meglio così..... :-)
+
+Come suggerito fa Lorenzo Ferrillo però adesso iniziano altri problemi con il 03....
+
+Io è un paio di notti che ci dormo sopra.....ma ancora non si è risolto l'arcano :-(
+
+Penso che oggi gli dedicherò l'intero pomeriggio e vediamo che ne viene fuori....

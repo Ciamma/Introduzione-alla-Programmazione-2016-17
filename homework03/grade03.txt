@@ -1,0 +1,37 @@
+# esempi di chiamate a funzione e risultati testati del grader
+
+import program03
+
+>>> program03.statistiche('file03_01_in.html', 2, 2)
+(31, 9, 13, 11,  {'strong', 'br', 'span', 'caption', 'th', 'em', 'p', 'td', 'tr', 'a', 'img', 'table', 'code', 'h1', 'html', 'body'}))
+
+>>> program03.statistiche('file03_01.html', 3, 0)
+(31, 2, 33, 11,{'strong', 'br', 'span', 'caption', 'th', 'em', 'p', 'td', 'tr', 'a', 'img', 'table', 'code', 'h1', 'html', 'body'}))
+
+>>> program03.statistiche('file03_02.html', 2, 2)
+(3863, 1384, 911, 306, 
+{'sup', 'pre', 'br', 'dt', 'tt', 'li', 'th', 'script', 'div', 'td', 'tr', 'button',
+'a', 'img', 'code', 'ol', 'abbr', 'input', 'body', 'meta', 'dd', 'strong', 'h4', 'link', 
+'i', 'form', 'span', 'b', 'ul', 'h3', 'caption', 'small', 'p', 'dl', 'h2', 'style', 
+'table', 'h5', 'title', 'head', 'h1', 'html', 'label'}))
+
+>>> program03.statistiche('file03_02.html', 5, 6)
+(3863, 8, 181, 306, 
+{'sup', 'pre', 'br', 'dt', 'tt', 'li', 'th', 'script', 'div', 'td', 'tr', 'button', 
+'a', 'img', 'code', 'ol', 'abbr', 'input', 'body', 'meta', 'dd', 'strong', 'h4', 'link',
+'i', 'form', 'span', 'b', 'ul', 'h3', 'caption', 'small', 'p', 'dl', 'h2', 'style', 
+'table', 'h5', 'title', 'head', 'h1', 'html', 'label'}))
+
+>>> program03.statistiche('file03_03.html', 2, 3)
+(3002, 1212, 582, 193, 
+{'sup', 'br', 'li', 'th', 'script', 'div', 'td', 'tr', 'button', 'a', 'img', 'ol', 'input',
+'body', 'meta', 'strong', 'h4', 'link', 'i', 'form', 'span', 'b', 'ul', 'small', 'p', 'h2', 
+'style', 'table', 'h5', 'title', 'head', 'h1', 'blockquote', 'html', 'label'}))
+
+>>> program03.statistiche('file03_03.html', 6, 8)
+(3002, 4, 83, 193, 
+{'sup', 'br', 'li', 'th', 'script', 'div', 'td', 'tr', 'button', 'a', 'img', 'ol', 'input', 
+'body', 'meta', 'strong', 'h4', 'link', 'i', 'form', 'span', 'b', 'ul', 'small', 'p', 'h2', 
+'style', 'table', 'h5', 'title', 'head', 'h1', 'blockquote', 'html', 'label'}))
+
+

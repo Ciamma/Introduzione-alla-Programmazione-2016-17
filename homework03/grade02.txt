@@ -1,0 +1,131 @@
+
+# esempi di chiamate a funzione e risultati testati del grader
+
+import program02
+
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').degree()
+{('rase', 2), ('raso', 1), ('coso', 1), ('roso', 0), ('cose', 2), ('case', 3), ('caso', 2), ('rose', 1)}
+
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').degree()
+{('morir', 0), ('moria', 3), ('maria', 4), ('tatto', 0), ('mania', 2), ('tonto', 1), ('ratto', 2), ('rotta', 1), ('motto', 1), ('marra', 2),
+('motta', 2), ('mario', 0), ('morta', 3), ('tonta', 2), ('manta', 5), ('marta', 2), ('tanta', 2), ('matta', 3), ('monta', 4), ('ratta', 2), 
+('manto', 3), ('morra', 2), ('monto', 3), ('torta', 1), ('torto', 0), ('morto', 2), ('rotto', 0), ('morro', 1),
+('tanto', 2), ('matto', 3)}
+
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').count(0)
+1
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').count(2)
+6
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').count(4)
+0
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').count(1)
+2
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').count(4)
+50
+
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').height(1)
+{'cose', 'rase', 'caso'}
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').height(2)
+{'coso', 'rose', 'raso'}
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').height(3)
+{'roso'}
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').height(4)
+{}
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').height(1)
+{'manta', 'maria'}
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').height(2)
+{'moria', 'monta', 'manto', 'mario', 'marra', 'matta', 'marta', 'tanta'}
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').height(3)
+{'morra', 'monto', 'tonta', 'ratta', 'morir', 'motta', 'matta', 'tanto', 'marta', 'morta', 'matto'}
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').height(4)
+{'ratto', 'morro', 'tatto', 'ratta', 'morto', 'matta', 'tonto', 'matto', 'motta', 'morta', 'torta', 'motto', 'rotta'}
+
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').leaves()
+{('roso', 6)}
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').leaves()
+{('morir', 1), ('torto', 26), ('mario', 1), ('tatto', 16), ('rotto', 55)}
+
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').path('rase', 'roso')
+{('rase', 'rose', 'roso'), ('rase', 'raso', 'roso')}
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').path('cose', 'raso')
+{}
+>>> program02.gen_wtree('file02_01_in.txt', 'case', 'rso').path('case', 'roso')
+{('case', 'caso', 'coso', 'roso'), ('case', 'rase', 'rose', 'roso'), ('case', 'cose', 'rose', 'roso'),
+('case', 'rase', 'raso', 'roso'), ('case', 'cose', 'coso', 'roso'), ('case', 'caso', 'raso', 'roso')}
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').path('marta', 'rotta')
+{('marta', 'matta', 'ratta', 'rotta'), ('marta', 'morta', 'motta', 'rotta'), ('marta', 'matta', 'motta', 'rotta')},
+>>> program02.gen_wtree('file02_01_in.txt', 'mania', 'raot').path('maria', 'tatto')
+{('maria', 'marta', 'matta', 'matto', 'ratto', 'tatto'), ('maria', 'marra', 'marta', 'matta', 'matto', 'tatto'),
+('maria', 'marta', 'matta', 'ratta', 'ratto', 'tatto'), ('maria', 'marra', 'marta', 'matta', 'matto', 'ratto', 'tatto'),
+('maria', 'marta', 'matta', 'matto', 'tatto'), ('maria', 'marra', 'marta', 'matta', 'ratta', 'ratto', 'tatto')}
+
+>>> program02.gen_wtree('file02_01_in.txt', 'alba', 'bcdefgilopst').degree()
+{('atei', 2), ('ossa', 2), ('glia', 2), ('etti', 1), ('alba', 9), ('elle', 2), ('alce', 7), ('osti', 0), ('oslo', 1), ('olio', 0),
+('alef', 0), ('alfa', 4), ('alga', 4), ('atto', 2), ('opti', 2), ('etto', 1), ('alto', 1), ('albo', 4), ('assi', 4), ('olla', 2),
+('alpi', 1), ('aldo', 3), ('atti', 2), ('alee', 6), ('else', 1), ('issa', 2), ('alia', 5), ('ella', 3), ('alci', 2), ('alle', 6),
+('olle', 0), ('asta', 3), ('algo', 2), ('opto', 1), ('asce', 4), ('oste', 1), ('esce', 3), ('olia', 2), ('ateo', 1), ('otto', 0),
+('aloe', 2), ('opta', 2), ('atea', 4), ('alpe', 2), ('alea', 8), ('alti', 3), ('ossi', 2), ('essi', 2), ('atta', 3), ('glie', 0),
+('alte', 4), ('alta', 5), ('atte', 2), ('esse', 2), ('esso', 2), ('osso', 0), ('asso', 3), ('asco', 3), ('isso', 1), ('albi', 4),
+('asti', 2), ('atee', 3), ('esci', 2), ('aste', 3), ('allo', 1), ('elsa', 2), ('asia', 1), ('essa', 5), ('esco', 2), ('osco', 2),
+('asse', 4), ('opla', 1), ('alla', 5), ('albe', 8)}
+
+>>> program02.gen_wtree('file02_01_in.txt', 'alba', 'bcdefgilopst').count(2)
+47
+>>> program02.gen_wtree('file02_01_in.txt', 'alba', 'bcdefgilopst').count(6)
+1698
+
+>>> program02.gen_wtree('file02_01_in.txt', 'alba', 'bcdefgilopst').height(2)
+{'albi', 'alpe', 'glia', 'alfa', 'atea', 'albo', 'alci', 'olla', 'ella', 'alce', 'alta', 'alef', 'alto', 'alle', 'alga', 'alla',
+'alti', 'aloe', 'allo', 'alia', 'alte', 'asia', 'aldo', 'algo', 'atta', 'asta', 'alee', 'alpi', 'olia'}
+
+>>> program02.gen_wtree('file02_01_in.txt', 'alba', 'bcdefgilopst').leaves()
+{('osso', 548), ('alef', 4), ('olio', 16), ('olle', 106), ('osti', 797), ('glie', 8), ('otto', 5438)]}
+  
+>>> program02.gen_wtree('file02_01_in.txt', 'alba', 'bcdefgilopst').path('alpe', 'osti')
+{('alpe', 'alte', 'aste', 'asti', 'osti'), ('alpe', 'alte', 'aste', 'oste', 'osti'),
+('alpe', 'alte', 'alti', 'asti', 'osti'), ('alpe', 'alpi', 'alti', 'asti', 'osti')}
+
+>>> program02.gen_wtree('file02_01_in.txt', 'alba', 'bcdefgilopst').path('alba', 'alef')
+{('alba', 'albe', 'alee', 'alef'), ('alba', 'alea', 'alef'), ('alba', 'alea', 'alee', 'alef'),
+('alba', 'albe', 'alce', 'alee', 'alef')}
+
+>>> program02.gen_wtree('file02_01_in.txt', 'alba', 'bcdefgilopst').path('albi', 'otto')
+{('albi', 'alci', 'alti', 'atti', 'atto', 'otto'), ('albi', 'alti', 'asti', 'atti', 'atto', 'etto', 'otto'),
+('albi', 'albo', 'aldo', 'algo', 'alto', 'atto', 'otto'), ('albi', 'alti', 'asti', 'atti', 'atto', 'otto'),
+('albi', 'alpi', 'alti', 'alto', 'atto', 'etto', 'otto'), ('albi', 'alpi', 'alti', 'atti', 'atto', 'etto', 'otto'),
+('albi', 'alti', 'atti', 'atto', 'etto', 'otto'), ('albi', 'alci', 'alpi', 'alti', 'alto', 'atto', 'otto'),
+('albi', 'alci', 'alpi', 'alti', 'atti', 'atto', 'etto', 'otto'), ('albi', 'alpi', 'alti', 'asti', 'atti', 'atto', 'otto'),
+('albi', 'alpi', 'alti', 'atti', 'atto', 'otto'), ('albi', 'alci', 'alti', 'alto', 'atto', 'etto', 'otto'),
+('albi', 'alti', 'atti', 'atto', 'otto'), ('albi', 'albo', 'aldo', 'alto', 'atto', 'etto', 'otto'),
+('albi', 'alci', 'alti', 'atti', 'etti', 'etto', 'otto'),('albi', 'albo', 'aldo', 'algo', 'allo', 'alto', 'atto', 'etto', 'otto'),
+('albi', 'alpi', 'alti', 'atti', 'etti', 'etto', 'otto'), ('albi', 'alpi', 'alti', 'asti', 'atti', 'atto', 'etto', 'otto'),
+('albi', 'albo', 'allo', 'alto', 'atto', 'etto', 'otto'), ('albi', 'alci', 'alti', 'atti', 'atto', 'etto', 'otto'),
+('albi', 'alci', 'alpi', 'alti', 'asti', 'atti', 'atto', 'etto', 'otto'),
+('albi', 'alci', 'alti', 'asti', 'atti', 'atto', 'otto'), ('albi', 'albo', 'allo', 'alto', 'atto', 'otto'),
+('albi', 'alpi', 'alti', 'alto', 'atto', 'otto'), ('albi', 'alci', 'alpi', 'alti', 'alto', 'atto', 'etto', 'otto'),
+('albi', 'alti', 'alto', 'atto', 'otto'), ('albi', 'alci', 'alpi', 'alti', 'atti', 'atto', 'otto'),
+('albi', 'alpi', 'alti', 'asti', 'atti', 'etti', 'etto', 'otto'), ('albi', 'alti', 'alto', 'atto', 'etto', 'otto'),
+('albi', 'alci', 'alpi', 'alti', 'asti', 'atti', 'etti', 'etto', 'otto'), ('albi', 'albo', 'aldo', 'alto', 'atto', 'otto'),
+('albi', 'alci', 'alti', 'alto', 'atto', 'otto'), ('albi', 'albo', 'alto', 'atto', 'etto', 'otto'),
+('albi', 'alci', 'alti', 'asti', 'atti', 'etti', 'etto', 'otto'),
+('albi', 'albo', 'aldo', 'allo', 'alto', 'atto', 'etto', 'otto'), ('albi', 'albo', 'algo', 'alto', 'atto', 'otto'),
+('albi', 'alci', 'alpi', 'alti', 'atti', 'etti', 'etto', 'otto'), ('albi', 'albo', 'aldo', 'algo', 'allo', 'alto', 'atto', 'otto'),
+('albi', 'albo', 'algo', 'allo', 'alto', 'atto', 'etto', 'otto'), ('albi', 'albo', 'aldo', 'allo', 'alto', 'atto', 'otto'),
+('albi', 'alti', 'asti', 'atti', 'etti', 'etto', 'otto'), ('albi', 'albo', 'aldo', 'algo', 'alto', 'atto', 'etto', 'otto'),
+('albi', 'albo', 'alto', 'atto', 'otto'), ('albi', 'alci', 'alpi', 'alti', 'asti', 'atti', 'atto', 'otto'),
+('albi', 'alci', 'alti', 'asti', 'atti', 'atto', 'etto', 'otto'), ('albi', 'albo', 'algo', 'alto', 'atto', 'etto', 'otto'),
+('albi', 'alti', 'atti', 'etti', 'etto', 'otto'), ('albi', 'albo', 'algo', 'allo', 'alto', 'atto', 'otto')}
+    
+
+
+
+
+>>> program02.post('file02_04_in.txt',10,12)
+({u'program': (5, 13), u'funzione': (7, 11), u'lst': (12, 22), u'grade': (16, 25), u'lista': (15, 21), u'test': (6, 15)}, 
+[(u'grade', 25), (u'lst', 22), (u'lista', 21), (u'test', 15), (u'program', 13)])
+
+
+>>> program02.post('file02_05_in.txt',10,12)
+({u'canopy': (10, 13), u'grade': (11, 13)}, 
+[])
+

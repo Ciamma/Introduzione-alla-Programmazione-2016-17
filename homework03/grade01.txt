@@ -1,0 +1,91 @@
+# esempi di chiamate a funzione e risultati testati del grader
+
+import program01
+
+>>> p1 = program01.Punto(50,70)
+>>> p1.to_tuple()
+(50,70)
+>>> p1.modifica_punto(0,0)
+>>> p1.to_tuple()
+(0,0)
+
+>>> c1 = program01.Colore(255,0,0)
+>>> c1.to_tuple()
+(255,0,0)
+>>> c1.modifica_colore(0,0,0)
+>>> c1.to_tuple()
+(0,0,0)
+
+
+>>> c1 = program01.Colore(10,15,10)
+>>> c1.to_tuple()
+(10,15,10)
+>>> c2 = program01.Colore(20,5,200)
+>>> c2.to_tuple()
+(20,5,200)
+>>> c1.miscela(c2).to_tuple()
+(15,10,105)
+
+>>> p1 = program01.Punto(50,70)
+>>> c1 = program01.Colore(10,15,10)
+>>> r1=program01.Rettangolo(p1,40,70,c1)
+>>> r1.__str__()
+'punto di inizio:(50, 70)\nlarghezza:40\nlunghezza:70\ncolore:(10, 15, 10)'
+
+>>> p1 = program01.Punto(50,70)
+>>> c1 = program01.Colore(10,15,10)
+>>> r1 = program01.Rettangolo(p1,40,70,c1)
+>>> p1.modifica_punto(0,0)
+>>> c1.modifica_colore(0,0,0)
+>>> r1.__str__()
+'punto di inizio:(0, 0)\nlarghezza:40\nlunghezza:70\ncolore:(0, 0, 0)'
+
+
+>>> p2 = program01.Punto(100,40)
+>>> c2 = program01.Colore(200,200,200)
+>>> r2 = program01.Rettangolo(p2,40,70,c2)
+>>> pa = program01.Punto(120,90)
+>>> ca = program01.Colore(100,100,100)
+>>> ra = program01.Rettangolo(pa,60,40,ca)
+>>> r6 = r2.inter(ra)
+>>> r6.__str__()
+'punto di inizio:(120, 90)\nlarghezza:20\nlunghezza:20\ncolore:(150, 150, 150)'
+
+>>> p2 = program01.Punto(100,40)
+>>> c2 = program01.Colore(200,200,200)
+>>> r2 = program01.Rettangolo(p2,40,70,c2)
+>>> pa = program01.Punto(30,140)
+>>> ca = program01.Colore(100,100,100)
+>>> ra = program01.Rettangolo(pa,50,20,ca)
+>>> r6 = r2.inter(ra)
+>>> type(r6)
+<class 'Nonetype'>
+
+>>> p2 = program01.Punto(100,40)
+>>> c2 = program01.Colore(0,250,0)
+>>> r2 = program01.Rettangolo(p2,40,70,c2)
+>>> p5 = program01.Punto(130,20)
+>>> c5 = program01.Colore(0,200,250)
+>>> r5 = program01.Rettangolo(p5,30,30,c5)
+>>> r6 = r2.super(r5)
+>>> r6.__str__()
+'punto di inizio:(100, 20)\nlarghezza:60\nlunghezza:90\ncolore:(0, 225, 125)' 
+
+>>> p1 = program01.Punto(50,70)
+>>> c1 = program01.Colore(255,0,0)
+>>> r1 = program01.Rettangolo(p1,150,100,c1)
+>>> p2 = program01.Punto(100,40)
+>>> c2 = program01.Colore(0,255,0)
+>>> r2 = program01.Rettangolo(p2,40,70,c2)
+>>> p3 = program01.Punto(120,90)
+>>> c3 = program01.Colore(0,0,255)
+>>> r3 = program01.Rettangolo(p3,60,40,c3)
+>>> p4 = program01.Punto(30,140)
+>>> c4 = program01.Colore(255,255,0)
+>>> r4 = program01.Rettangolo(p4,50,20,c4)
+>>> p5 = program01.Punto(130,20)
+>>> c5 = program01.Colore(0,255,255)
+>>> r5 = program01.Rettangolo(p5,50,20,c5)
+>>> r1.foto([r2,r3,r4,r5],'img01.png')
+  # L'immagine in "img01.png" deve essere uguale a quella in "img01_check.png"
+

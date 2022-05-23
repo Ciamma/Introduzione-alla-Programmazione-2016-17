@@ -1,0 +1,52 @@
+
+# esempi di chiamate a funzione e risultati testati del grader
+
+import program02
+
+
+>>> a = ['a0', 'b1', 'a2', 'b3', 'a4', 'b5']
+>>> b = ['b0', 'a1', 'b2', 'a3', 'b4', 'b5']
+>>> program02.modi(a,b)
+>>> a
+['a0', 'a2', 'a4']
+>>> b
+['a1', 'a3']
+
+
+>>> lista1 = ['1', '2', '3', '4', '5', '6']
+>>> lista2 = ['4', '5', '6', '1', '2', '3']
+>>> program02.modi(lista1,lista2)
+>>> lista1
+['1','2','3']
+>>> lista2
+['1','2','3']
+
+
+
+>>> la = ['bear', 'tiger', 'wolf', 'whale', 'elephant']
+>>> lb = ['swan', 'cat', 'dog', 'duck', 'rabbit']
+>>> program02.modi(la,lb)
+>>> la
+['bear','elephant']
+>>> lb
+['cat','dog','duck']
+
+
+>>> nomi1 = ['Taylor', 'Alyssa', 'Allison', 'Grace', 'Sarah']
+>>> nomi2 = ['Victoria', 'Audrey', 'Ashley', 'Lillian', 'Sofia']
+>>> program02.modi(nomi1,nomi2)
+>>> nomi1
+['Taylor', 'Alyssa', 'Allison', 'Grace', 'Sarah']
+>>> nomi2
+[]
+
+
+>>> ana1 = ['Axy', 'xyA', 'yxA', 'yxA']
+>>> ana2 = ['axy', 'xya', 'xay', 'yax']
+>>> program02.modi(ana1,ana2)
+>>> ana1
+['Axy', 'xyA']
+>>> ana2
+['xay', 'yax']
+
+

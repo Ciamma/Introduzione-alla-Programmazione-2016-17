@@ -1,0 +1,24 @@
+# esempi di chiamate a funzione e risultati testati del grader
+
+import program03
+
+program03.doub(‘img03_01_in.png', 'img03_01_out.png')
+# L'immagine in "img03_01_out.png" deve essere uguale a quella in "img03_01_check.png"
+
+
+program03.doub(‘img03_02_in.png', 'img03_02_out.png')
+# L'immagine in "img03_02_out.png" deve essere uguale a quella in "img03_02_check.png"
+
+
+program03.doub(‘img03_03_in.png', 'img03_03_out.png')
+# L'immagine in "img03_03_out.png" deve essere uguale a quella in "img03_03_check.png"
+
+
+program03.polarize('img03_04_in.png','img03_04_out.png')
+# L'immagine in "img03_04_out.png" deve essere uguale a quella in "img03_04_check.png"
+
+
+program03.polarize('img03_05_in.png', 'img03_05_out.png')
+# L'immagine in "img03_05_out.png" deve essere uguale a quella in "img03_05_check.png"
+
+

@@ -1,0 +1,25 @@
+
+# esempi di chiamate a funzione e risultati testati del grader
+
+import program01
+
+
+>>> program01.mesi([1,'10-10-2007', '2-3-1962','casa', '31-11-2007'])
+[ '*', 'ottobre', '*', '*', '*']
+
+
+>>> program01.mesi(['*','02-06-2019', '2-06-2006','Python', '30-02-1982','25-02-1982'])
+[ '*', 'giugno’,’*’, '*', '*', 'febbraio']
+
+
+>>> program01.mesi(['5/6/1991','5-7-1991','7-6-1990-3', 'esercizio', '06-06-19a1'])
+['*','*','*','*','*']
+
+
+>>> program01.mesi([['07-07-2011'], '07-08-2011', '1', 1022])
+['*','agosto','*','*']
+
+
+>>> program01.mesi(['for i=1 to 10', '02-01-1981', 3.14, '28-04-1913', [], '3.14'])
+['*','gennaio','*','aprile','*','*']
+

@@ -1,0 +1,40 @@
+<POST>
+
+
+ho una lista di stringhe, faccio un for per ogni elemento della lista, dentro faccio un altro for per ogni lettera della signola stringa. voglio utilizzare il metodo replace per eliminare la punteggiatura (sostituirla con spazi), questa non viene eliminata perchè?
+
+e_lst è la signola stringa nella lista
+e è l'emento che scorro con il for (il singolo carattere della stringa)
+
+if not e.isalpha():
+    e_lst.replace(e, ' ')
+
+ps. le due righe di codice sono all'interno del 2° for
+
+
+
+<POST>
+
+
+replace() non modifica la stringa "in-place", ma ritorna la nuova stringa. Quindi bisogna assegnarla a una variabile. Ma oltre a questo, non dovrebbe essere possibile modificare una stringa con il for loop: le stringe sono immutabili. Come concetto generale, bisogna pensare a come creare una nuova stringa con le modifiche che ti servono.
+
+
+
+<POST>
+
+
+Scusami ho capito male quello che facevi, ignora la seconda parte del mio scorso messaggio 
+
+
+
+<POST>
+
+
+grazie, proverò a trovare un altro modo per modificarla, credo che comunque il problema non sia il replace, ma il for. 
+
+
+
+<POST>
+
+
+Per darti un indizio, replace() funziona con un qualsiasi stringa... Non solo i caratteri singoli
